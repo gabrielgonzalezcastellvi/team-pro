@@ -23,8 +23,6 @@ $mensaje2 ="
 Team Pro Pruebas de envio
 Para: $nombre  $apellido
 
-$mensaje
-
  Señor/ra : $nombre le agradecemos confiar en nosotros su cuenta ya se creo correctamente
  Su numero de socio es: $numeroSocio
  recuerde que sus datos son los siguientes: $nombre , $apellido , y su contraseña es: $password que en nuestra base de datos se registra encriptada por su seguridad
