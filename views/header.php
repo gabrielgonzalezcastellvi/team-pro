@@ -23,8 +23,8 @@
     <header>
         <section id="client" class="client-brand">
             <div class="container-fluid">
+                <img id="team-pro" src="<?php echo RUTA; ?>/images/escudo_ejemplo.png" alt="Logo cliente" width="200px">
                 <p>APP # Reserva de turno</p>
-                <p>NOMBRE DEL CLUB (o logo mejor)<p>
             </div>
         </section>
     </header>

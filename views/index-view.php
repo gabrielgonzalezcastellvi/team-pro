@@ -1,5 +1,5 @@
 <?php
-require 'views/header.php';
+require 'header.php';
 ?>
 <div class="login-panel">
 <form class="formulario" name="login" action="" method="POST">
@@ -11,7 +11,7 @@ require 'views/header.php';
 				<i class="icono izquierda fa fa-lock"></i><input class="password_btn" type="password" name="password" placeholder="Contraseña">
 				<i class="submit-btn fa fa-arrow-right" onclick="login.submit()"></i>
 			</div>
-            <a href="#">¿Olvidaste la contraseña?</a>
+            <a href="<?php echo RUTA; ?>/reset-pass.php">¿Olvidaste la contraseña?</a> | <a href="<?php echo RUTA; ?>/registry.php">¿Aún no estás registrado?</a>
 		</form>
 
 

@@ -25,16 +25,20 @@ body {
 }
 
 a {
-    text-decoration: none !important;
+	text-decoration: none !important;
+	color: #ec9700 !important;
+}
+a:hover{
+	color: #fbb03b !important;
 }
 
 /*Login*/
 div.login-panel{
-    border: solid 1px yellow;
+    border: solid 1px #f2f2f2;
     max-width: 500px;
     width: 90%;
     margin: auto;
-    padding: 1em;
+    
 
 }
 
@@ -65,7 +69,7 @@ div.login-panel{
 	max-height: 48px;
 	font-size: 18px;
 	line-height: 18px;
-	background: #000;
+	background: #333333;
 	display: inline-block;
 	color:#fff;
 	vertical-align: top;
@@ -109,7 +113,7 @@ div.login-panel{
 	max-height: 48px;
 	font-size: 18px;
 	line-height: 18px;
-	background: red;
+	background: #ec9700;
 	display: inline-block;
 	color:#fff;
 	
@@ -135,8 +139,6 @@ section.client-brand {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
 }
 section#client{
     text-align: center;
@@ -146,7 +148,7 @@ section#client{
 section#developer{
     border: solid 1px red;
     margin-top: 2em;
-    padding: 5em 0;
+    padding: 3em 0;
     text-align: center;
     font-size: 10px;
     background-color: #f2f2f2;
@@ -158,7 +160,7 @@ section#developer{
 @media only screen and (max-width: 700px) {
 
     section#developer{
-        margin-top: 20em;
+        margin-top: 5em;
         
     }
 
