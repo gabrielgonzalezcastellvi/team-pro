@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
 
@@ -8,17 +9,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-user"></i> Mi perfil</a>
+        <a class="nav-link" href="edit-profile.php"><i class="fa fa-user"></i> Mi perfil</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-calendar-check"></i> Mis reservas</a>
+        <a class="nav-link" href="my-booking.php"><i class="fas fa-calendar-check"></i> Mis reservas</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-plus"></i> Nueva reserva</a>
+        <a class="nav-link" href="home-panel.php"><i class="fas fa-plus"></i> Nueva reserva</a>
         </li>
       </ul>
       <li class="d-flex">
-          <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Salir</a>
+      <button type="button" class="btn btn-primary"><i class="fas fa-sign-out-alt"></i> Salir</button>
+          
         </li>
     </div>
   </div>

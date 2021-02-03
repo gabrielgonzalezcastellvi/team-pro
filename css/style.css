@@ -135,11 +135,11 @@ div.login-panel{
 .registry {
 	margin: 10px 0;
 }
-/*nav*/
-.d-flex{
-	background-color: #333333;
-}
 
+/*seleccion actividad*/
+.btn-activity{
+	margin: 1em 0;;
+}
 
 /*header*/
 section.client-brand {
