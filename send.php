@@ -23,21 +23,25 @@ $mensaje2 ="
 Team Pro Pruebas de envio
 Para: $nombre  $apellido
 
- Señor/ra : $nombre le agradecemos confiar en nosotros su cuenta ya se creo correctamente
- Su numero de socio es: $numeroSocio
- recuerde que sus datos son los siguientes: $nombre , $apellido , y su contraseña es: $password que en nuestra base de datos se registra encriptada por su seguridad
- Clave encriptada es: $passwordSecure
+ Señor/ra : $nombre le agradecemos confiar en nosotros. Su cuenta en la aplicación de reservas de turnos se creó correctamente
+ Nº de socio: $numeroSocio
+ Usuario: $nombre $apellido 
+ Contraseña: $password (Por seguridad, su contraseña se registró de forma encriptada en nuestra base de datos: $passwordSecure)
  
 ";
-$header = 'From:gonzalezcastellvigabriel@gmail.com'. "\r\n" .
+#¿ES realmente necesario q el usuario sepa q se encriptó? Porque en definitiva ingresará con su contraseña 'humana'. 
+#podría ser confuso para el socio el dato
+
+
+$header = 'From:gonzalezcastellvigabriel@gmail.com'. "\r\n" . #al socio le debería llegar un mail con el remitente que sea el NOMBRE DEL CLUB
 'X-Mailer: PHP/' ;
 
 //mail($para,$asunto,$mensaje,$header);
 $resultado=mail($email,$asunto,$mensaje2,$header);
     if ($resultado) {
-        echo "Correo enviado";
+        echo "Correo enviado correctamente";
     } else {
-        echo "Correo NO enviado";
+        echo "El correo NO fue enviado";
     }
 
 
