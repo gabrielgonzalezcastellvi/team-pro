@@ -1,2 +1,2 @@
-<?php require_once('../views/registry.view.php'); ?>
+<?php require_once('./views/registry.view.php'); ?>
 
