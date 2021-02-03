@@ -16,8 +16,8 @@ require 'views/header.php';
         <input class="registry" type="email" name="email" title="Correo" placeholder="Email" required>
 
 <div class="form-group">
-<input type="password" name="password" title="Contraseña" placeholder="Contraseña" required>
-        <input type="checkbox" value="Mostrar Contraseña" onclick=""> Mostrar
+<input type="password" id="mostrar" name="password" title="Contraseña" placeholder="Contraseña" required>
+        <input type="checkbox" value="Mostrar Contraseña" onclick="mostrarContraseña()"> Mostrar
 </div>
 
         <input class="btn btn-primary btn-lg" type="submit" value="Registrarse">
