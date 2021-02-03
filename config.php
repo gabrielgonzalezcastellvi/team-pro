@@ -9,5 +9,4 @@ $bd_config= array(
  'pass' => ''
 );
 
-
 ?>
