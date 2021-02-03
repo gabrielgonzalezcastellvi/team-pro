@@ -11,13 +11,18 @@
 <h1>Registro</h1>
 <input type="text" name="Name" title="Nombre" placeholder="Nombre">
 <br>
+<br>
 <input type="text" name="LastName" title="Apellido" placeholder="Apellido">
+<br>
 <br>
 <input type="number" name="UserNumber" title="NumeroDeUsuario" placeholder="Numero de socio">
 <br>
+<br>
 <input type="email" name="email" title="Correo" placeholder="Correo" required>
 <br>
+<br>
 <input type="password" name="password" title="Contraseña" placeholder="Contraseña" required>
+<br>
 <br>
 <input type="submit" value="Registrarse">
 </form>
