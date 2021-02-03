@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>RegistryViews</title>
 </head>
 <body>
 <form action="send.php" method="post">
+<h1>Registro</h1>
 <input type="text" name="Name" title="Nombre" placeholder="Nombre">
 <br>
 <input type="text" name="LastName" title="Apellido" placeholder="Apellido">
