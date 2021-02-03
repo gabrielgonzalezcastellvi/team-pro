@@ -2,9 +2,9 @@
 require 'header.php';
 ?>
 <div class="login-panel">
-<form class="formulario" name="login" action="" method="POST">
+<form class="formulario" name="login" action="validation-user.php" method="POST">
 			<div class="form-group">
-				<i class="icono izquierda fa fa-user"></i><input class="usuario" type="text" name="usuario" placeholder="Tu email">
+				<i class="icono izquierda fa fa-user"></i><input class="usuario" type="text" name="email" placeholder="Tu email">
 			</div>
 
 			<div class="form-group">
