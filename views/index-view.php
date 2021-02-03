@@ -14,7 +14,6 @@ require 'header.php';
             <a href="<?php echo RUTA; ?>/reset-pass.php">¿Olvidaste la contraseña?</a> | <a href="<?php echo RUTA; ?>/registry.php">¿Aún no estás registrado?</a>
 		</form>
 
-
 </div>
 
 

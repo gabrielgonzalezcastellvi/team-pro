@@ -24,13 +24,15 @@ body {
 	
 }
 
-a {
-	text-decoration: none !important;
-	color: #ec9700 !important;
+
+
+div.panel{
+	
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
 }
-a:hover{
-	color: #fbb03b !important;
-}
+
 
 /*Login*/
 div.login-panel{
@@ -127,12 +129,14 @@ div.login-panel{
 }
 
 
-
+/*nav*/
+.d-flex{
+	background-color: #333333;
+}
 
 
 /*header*/
 section.client-brand {
-    border: solid 1px green;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -144,9 +148,13 @@ section#client{
     text-align: center;
     font-size: 26px;
 }
+h3.app-name{
+	font-family: 'Londrina Solid', cursive;
+	font-size: 26px;
+	color: #333333;
+}
 /*footer*/
 section#developer{
-    border: solid 1px red;
     margin-top: 2em;
     padding: 3em 0;
     text-align: center;

@@ -1,5 +1,5 @@
 <?php
-require 'header.php';
+require 'views/header.php';
 ?>
 
 <div class="login-panel">
@@ -28,5 +28,5 @@ require 'header.php';
 </div>
 
 <?php
-require 'footer.php';
+require 'views/footer.php';
 ?>
