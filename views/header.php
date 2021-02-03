@@ -20,3 +20,11 @@
 </head>
 
 <body>
+    <header>
+        <section id="client" class="client-brand">
+            <div class="container-fluid">
+                <p>APP # Reserva de turno</p>
+                <p>NOMBRE DEL CLUB (o logo mejor)<p>
+            </div>
+        </section>
+    </header>
