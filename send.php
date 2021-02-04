@@ -43,9 +43,8 @@ Recuerda tus datos:
 $header = 'From: Secretaría Club X'. "\r\n" .
 'X-Mailer: PHP';
 
-//mail($para,$asunto,$mensaje,$header);
 $correo=mail($to,$asunto,$mensaje,$header);
-//header('Location: index.php');    
+
 if ($correo) {
    // echo"<script>alert('Se envio su correo'); window.location.href='index.php';</script>";
    echo "<script>alert('Tus datos se enviaron correctamente. Por favor, chequea tu mail.');window.location.href='index.php';</script>";
