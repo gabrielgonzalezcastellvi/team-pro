@@ -1,44 +1,49 @@
 <?php
 require 'conection.php';
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+//Se recuperan las variables del formularios de inscripcion;
     $nombre=$_POST['Name'];
 $apellido=$_POST['LastName'];
 $numeroSocio=$_POST['UserNumber'];
 $email=$_POST['email'];
+$mobile=$_POST['mobile'];
 $password=$_POST['password'];
 $passwordSecure = hash('sha512' , $password);
 
-try {
-    $conexion = new PDO('mysql:host=localhost;dbname=registros', 'root', '');
-} catch (PDOException $e) {
-    echo "Error:" . $e->getMessage();
+
+//Hacemos la sentencia sql para insertar los datos;
+
+$sql="INSERT INTO socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$email','$mobile','$passwordSecure')"; //socios es el nombre de la tabla que se encuentra dentro de la base de datos 
+//reservas, voy a guardar la variable $passwordSecure que esta encriptada en la base de datos;
+
+//ejecutamos la sentencia sql;
+$ejecutar = mysqli_query($conectar,$sql);
+//verificamos la ejecucion;
+if(!$ejecutar){
+   echo"No se guardaron los datos error"; //luego vemos bien a donde tendria que ir esto es para probar que se envian los datos correctamente;
+}else{
+    echo"Se guardaron los datos correctamente";
 }
-}
+//aca abajo se envia el correo al usuario para que tambien tenga en su correo los datos de su cuenta;
+$to = $email;
+$asunto='Registro socios en teamPro';
+$mensaje ="
+Hola señor/a socio/a: $nombre $apellido 
+Sus datos de registros son los siguientes:
 
-$asunto="Gracias Por Confiar en Team Pro";
-$mensaje2 ="
+Numero socio: $numeroSocio
 
+Contraseña: $password
 
-Team Pro Pruebas de envio
-Para: $nombre  $apellido
-
- Señor/ra : $nombre le agradecemos confiar en nosotros su cuenta ya se creo correctamente
- Su numero de socio es: $numeroSocio
- recuerde que sus datos son los siguientes: $nombre , $apellido , y su contraseña es: $password que en nuestra base de datos se registra encriptada por su seguridad
- Clave encriptada es: $passwordSecure
- 
 ";
-$header = 'From:gonzalezcastellvigabriel@gmail.com'. "\r\n" .
-'X-Mailer: PHP/' ;
+$header = 'From: Club Mendoza Regatas'. "\r\n" .
+'X-Mailer: PHP';
 
 //mail($para,$asunto,$mensaje,$header);
-$resultado=mail($email,$asunto,$mensaje2,$header);
-    if ($resultado) {
-        echo "Correo enviado";
+$correo=mail($email,$asunto,$mensaje,$header);
+    if ($correo) {
+        echo "<script>alert('mensaje enviado')</script>";
     } else {
-        echo "Correo NO enviado";
+        echo "<script>alert('Correo NO enviado Intentelo nuevamente')</script>";
     }
-
-
 ?>

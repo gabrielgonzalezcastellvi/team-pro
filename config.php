@@ -1,10 +1,10 @@
 <?php
-define('RUTA', 'http://localhost/team-pro/');
+define('RUTA', 'http://localhost/team-pro');
 
 
 
 $bd_config= array(
- 'data-base' => 'registros',
+ 'data-base' => 'inscripcionsocios',
  'user' => 'root',
  'pass' => ''
 );

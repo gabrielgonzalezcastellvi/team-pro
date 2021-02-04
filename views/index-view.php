@@ -1,9 +1,22 @@
 <?php
-require 'views/header.php';
+require 'header.php';
 ?>
+<div class="login-panel">
+<form class="formulario" name="login" action="validation-user.php" method="POST">
+			<div class="form-group">
+				<i class="icono izquierda fa fa-user"></i><input class="usuario" type="text" name="email" placeholder="Tu email">
+			</div>
 
-<h1>Hola Mundo</h1>
-<img src="<?php echo RUTA; ?>/images/teamPRO-logo.png" alt="">
+			<div class="form-group">
+				<i class="icono izquierda fa fa-lock"></i><input class="password_btn" type="password" name="password" placeholder="Contraseña">
+				<i class="submit-btn fa fa-arrow-right" onclick="login.submit()"></i>
+			</div>
+            <a href="<?php echo RUTA; ?>/reset-pass.php">¿Olvidaste la contraseña?</a> | <a href="<?php echo RUTA; ?>/registry.php">¿Aún no estás registrado?</a>
+		</form>
+<a href="<?php echo RUTA; ?>/home-panel.php">home-panel.php</a> --> Esto hay q quitarlo cdo configuremos al final los session_start, es sólo para poder entrar facilmente
+</div>
+
+
 
 <?php
 require 'footer.php';
