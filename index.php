@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+require 'conection.php';
 
 
 #Lógica del home de la App
