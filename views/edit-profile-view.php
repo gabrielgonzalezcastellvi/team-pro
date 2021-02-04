@@ -1,13 +1,16 @@
 <?php
-require 'views/header.php';
+ require 'header.php';
+ require 'nav.php';
+
 ?>
-s
-<div class="login-panel">
-    <form class="formulario" name="registry" action="send.php" method="POST">
-        <h3 class="section-title">Nuevo usuario</h3>
-        <p>¡Resgistrate en la app para comenzar a utilizar el servicio de reservas online!</p>
-        <input type="hidden" name="id">
-        <input class="registry" type="text" name="Name" title="Nombre" placeholder="Nombre" required>
+
+<div class="container-fluid">
+
+<form class="formulario" name="registry" action="send.php" method="POST">
+        <h3 class="section-title">Estos son tus datos. Puedes editarlos:</h3>
+        
+
+        <input class="registry" type="text" name="Name" title="Nombre" value="<?php echo $socios['nombre']; ?>" required>
 
         <input class="registry" type="text" name="LastName" title="Apellido" placeholder="Apellido" required>
 
@@ -25,10 +28,9 @@ s
         <input class="btn btn-primary btn-lg" type="submit" value="Registrarse">
 
     </form>
-
-
 </div>
 
 <?php
-require 'views/footer.php';
+ require 'footer.php';
+
 ?>

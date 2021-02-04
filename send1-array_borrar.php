@@ -4,6 +4,7 @@ require 'functions.php';
 
 //Se recuperan las variables del formularios de inscripcion;
 
+$id = $_POST['id'];
 $nombre=strtoupper(limpiarDatos($_POST['Name']));
 $apellido=strtoupper(limpiarDatos($_POST['LastName']));
 $numeroSocio=limpiarDatos($_POST['UserNumber']);
@@ -11,6 +12,19 @@ $email=limpiarDatos($_POST['email']);
 $mobile=limpiarDatos($_POST['mobile']);
 $password=$_POST['password'];
 $passwordSecure = hash('sha512' , $password);
+//Arreglo con las variables saneadas
+
+$registroSocio= array(
+    $id,
+    $nombre,
+    $apellido,
+    $numeroSocio,
+    $email,
+    $mobile,
+    $passwordSecure
+);
+
+
 
 
 //Hacemos la sentencia sql para insertar los datos;
