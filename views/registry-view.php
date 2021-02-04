@@ -13,7 +13,7 @@ require 'views/header.php';
 
         <input class="registry" type="number" name="UserNumber" title="NumeroDeUsuario" placeholder="Numero de socio">
 
-        <input class="registry" type="text" name="Celular" title="celular" placeholder="Celular">
+        <input class="registry" type="number" name="mobile" placeholder="Celular">
 
         <input class="registry" type="email" name="email" title="Correo" placeholder="Email" required>
 
