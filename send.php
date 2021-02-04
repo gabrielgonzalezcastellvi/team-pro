@@ -22,12 +22,10 @@ $sql="INSERT INTO socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$ema
 //ejecutamos la sentencia sql;
 $ejecutar = mysqli_query($conectar,$sql);
 //verificamos la ejecucion;
-//if(!$ejecutar){
-   // echo "<script>alert('Hubo un error, por favor inténtalo nuevamente. Si el error persiste por favor contáctate con nosotros'); window.location.href='index.php';</script>"; 
-    //Utilice la funcion window.location.href='documento.php' para poder mostrar el alert y luego redireccionar a la pagina, esta chequedo funciona.;
-//}else{
-    //echo "<script>alert('Tus datos se enviaron correctamente. Por favor, chequea tu mail.');window.location.href='index.php';</script>";
-    
+if(!$ejecutar){
+ echo "<script>alert('Hubo un error, por favor inténtalo nuevamente. Si el error persiste por favor contáctate con nosotros'); window.location.href='index.php';</script>"; 
+//Utilice la funcion window.location.href='documento.php' para poder mostrar el alert y luego redireccionar a la pagina, esta chequedo funciona.;
+}
 //}
 //aca abajo se envia el correo al usuario para que tambien tenga en su correo los datos de su cuenta;
 $to = $email;
