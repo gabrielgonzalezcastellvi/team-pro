@@ -7,13 +7,13 @@ require 'views/header.php';
         <h3 class="section-title">Nuevo usuario</h3>
         <p>¡Resgistrate en la app para comenzar a utilizar el servicio de reservas online!</p>
         
-        <input class="registry" type="text" name="Name" title="Nombre" placeholder="Nombre">
+        <input class="registry" type="text" name="Name" title="Nombre" placeholder="Nombre" required>
 
-        <input class="registry" type="text" name="LastName" title="Apellido" placeholder="Apellido">
+        <input class="registry" type="text" name="LastName" title="Apellido" placeholder="Apellido" required>
 
-        <input class="registry" type="number" name="UserNumber" title="NumeroDeUsuario" placeholder="Numero de socio">
+        <input class="registry" type="number" name="UserNumber" title="NumeroDeUsuario" placeholder="Numero de socio" required>
 
-        <input class="registry" type="number" name="mobile" placeholder="Celular">
+        <input class="registry" type="number" name="mobile" placeholder="Celular" required>
 
         <input class="registry" type="email" name="email" title="Correo" placeholder="Email" required>
 
