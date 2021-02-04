@@ -6,8 +6,8 @@ $mobile=$_POST['mobile'];
 $passwordSecure = hash('sha512' , $password);
 
 //Para hacer la validacion no me quedo de otr que volver a escribir la conexion a la base de datos porque necesitaba si o si tenerlo a mano para usar unas variables de la conexion;
-$conectar = mysqli_connect('localhost','root','','inscripcionsocios');
-
+//$conectar = mysqli_connect('localhost','root','','inscripcionsocios');
+require "conection.php";
 //consulta sql;
 $query = "SELECT * FROM `socios` WHERE `userSocio` = '$UserNumber' || '$mobile'  AND `passwordSecure` = '$password'";
 

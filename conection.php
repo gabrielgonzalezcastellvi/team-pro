@@ -1,5 +1,5 @@
 <?php
-
+define('RUTA','http://localhost/team-pro');
 //conectamos con la base de datos;
 $conectar = mysqli_connect('localhost','root','');
 //verificamos la conexion;
