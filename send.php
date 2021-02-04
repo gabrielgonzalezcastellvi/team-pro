@@ -28,11 +28,11 @@ if(!$ejecutar){
 $to = $email;
 $asunto='Registro socios en teamPro';
 $mensaje ="
-Hola señor/a socio/a: $nombre $apellido 
-Sus datos de registros son los siguientes:
-
-Numero socio: $numeroSocio
-
+Hola $nombre!
+Si tus datos están correctos, .
+Tus datos de registro son:
+$nombre $apellido
+Nº socio: $numeroSocio
 Contraseña: $password
 
 ";
