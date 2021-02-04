@@ -1,14 +1,25 @@
 <?php
- require 'header.php';
- require 'nav.php';
+require 'header.php';
+require 'nav.php';
 
 ?>
 
-<div class="container-fluid">
 
-<form class="formulario" name="registry" action="send.php" method="POST">
-        <h3 class="section-title">Estos son tus datos. Puedes editarlos:</h3>
-        
+<div class="container-fluid">
+    <div class="caja-perfil">
+        <ul class="datos-perfil">
+            <li><i class="perfil fas fa-user"></i> codigo php q traiga Nombre y apellido</li>
+            <li><i class="perfil fas fa-id-card"></i> codigo php q traiga Nº Socio</li>
+            <li><i class="perfil fas fa-mobile-alt"></i> codigo php q traiga Teléfono (celular)</li>
+            <li><i class="perfil fas fa-envelope"></i> codigo php q traiga E-mail</li>
+            <li><i class="perfil fas fa-lock"></i> codigo php q traiga Contraseña (oculta!!) <input type="checkbox" value="Mostrar Contraseña" onclick=""> Mostrar</li>
+        </ul>
+    </div>
+
+
+    <form class="formulario edit-profile" name="registry" action="send.php" method="POST">
+        <h3 class="section-title">Editar mis datos</h3>
+
 
         <input class="registry" type="text" name="Name" title="Nombre" value="<?php echo $socios['nombre']; ?>" required>
 
@@ -25,12 +36,13 @@
             <input type="checkbox" value="Mostrar Contraseña" onclick="mostrarContraseña()"> Mostrar
         </div>
 
-        <input class="btn btn-primary btn-lg" type="submit" value="Registrarse">
+        <input class="btn btn-primary btn-lg" type="submit" value="Actualizar datos">
 
     </form>
+
 </div>
 
 <?php
- require 'footer.php';
+require 'footer.php';
 
 ?>
