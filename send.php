@@ -26,17 +26,17 @@ if(!$ejecutar){
 }
 //aca abajo se envia el correo al usuario para que tambien tenga en su correo los datos de su cuenta;
 $to = $email;
-$asunto='Registro socios en teamPro';
+$asunto='Registro de socio en la app de reservas';
 $mensaje ="
 Hola $nombre!
-Si tus datos están correctos, .
-Tus datos de registro son:
+Tus datos fueron cargados correctamente, si coinciden con nuestros registros tendrás acceso a la aplicación próximamente. No te preocupes, te avisaremos. 
+Recuerda tus datos de registro:
 $nombre $apellido
 Nº socio: $numeroSocio
 Contraseña: $password
 
 ";
-$header = 'From: Club Mendoza Regatas'. "\r\n" .
+$header = 'From: Secretaría Club TeamPRO'. "\r\n" .
 'X-Mailer: PHP';
 
 //mail($para,$asunto,$mensaje,$header);

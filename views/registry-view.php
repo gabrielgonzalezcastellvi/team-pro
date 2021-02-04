@@ -5,7 +5,7 @@ require 'views/header.php';
 <div class="login-panel">
     <form class="formulario" name="registry" action="send.php" method="POST">
         <h3 class="section-title">Nuevo usuario</h3>
-        <p>Resgistrate en la app para comenzar a utilizar el servicio de reservas online.</p>
+        <p>¡Resgistrate en la app para comenzar a utilizar el servicio de reservas online!</p>
         
         <input class="registry" type="text" name="Name" title="Nombre" placeholder="Nombre">
 
