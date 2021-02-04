@@ -8,7 +8,7 @@ $passwordSecure = hash('sha512' , $password);
 $conectar = mysqli_connect('localhost','root','','inscripcionsocios');
 
 //consulta sql;
-$query = "SELECT * FROM `socios` WHERE `email` = '$email' AND `passwordSecure` = '$passwordSecure'";
+$query = "SELECT * FROM `socios` WHERE `email` = '$email' AND `passwordSecure` = '$password'";
 
 //ejecuto la consulta sql;
 $resultado = mysqli_query($conectar,$query);

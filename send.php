@@ -8,7 +8,6 @@ $numeroSocio=$_POST['UserNumber'];
 $email=$_POST['email'];
 $password=$_POST['password'];
 $passwordSecure = hash('sha512' , $password);
- 
 
 
 //Hacemos la sentencia sql para insertar los datos;
