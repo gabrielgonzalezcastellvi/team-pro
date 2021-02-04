@@ -20,9 +20,11 @@ $sql="INSERT INTO socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$ema
 $ejecutar = mysqli_query($conectar,$sql);
 //verificamos la ejecucion;
 if(!$ejecutar){
-   echo"No se guardaron los datos error"; //luego vemos bien a donde tendria que ir esto es para probar que se envian los datos correctamente;
+    echo "<script>alert('Hubo un error, por favor inténtalo nuevamente. Si el error persiste por favor contáctate con nosotros')</script>"; //luego vemos bien a donde tendria que ir esto es para probar que se envian los datos correctamente;
+    header('Location: index.php');
 }else{
-    echo"Se guardaron los datos correctamente";
+    echo "<script>alert('Tus datos se enviaron correctamente. Por favor, chequea tu mail.')</script>";
+    header('Location: index.php');
 }
 //aca abajo se envia el correo al usuario para que tambien tenga en su correo los datos de su cuenta;
 $to = $email;
