@@ -1,6 +1,6 @@
 <?php
 //este archivo lo cree para hacer la validacion de correo y contraseña, esto me va a costar lo se quiero shorar jajaja;
-$email=$_POST['email'];
+$UserNumber=$_POST['UserNumber'];
 $password=$_POST['password'];
 $mobile=$_POST['mobile'];
 $passwordSecure = hash('sha512' , $password);
@@ -9,7 +9,7 @@ $passwordSecure = hash('sha512' , $password);
 $conectar = mysqli_connect('localhost','root','','inscripcionsocios');
 
 //consulta sql;
-$query = "SELECT * FROM `socios` WHERE `userSocio` = '$email'|| '$mobile'  AND `passwordSecure` = '$password'";
+$query = "SELECT * FROM `socios` WHERE `userSocio` = '$UserNumber' || '$mobile'  AND `passwordSecure` = '$password'";
 
 //ejecuto la consulta sql;
 $resultado = mysqli_query($conectar,$query);
