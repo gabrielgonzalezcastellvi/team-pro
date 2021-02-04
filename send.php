@@ -25,34 +25,25 @@ if(!$ejecutar){
     echo"Se guardaron los datos correctamente";
 }
 //aca abajo se envia el correo al usuario para que tambien tenga en su correo los datos de su cuenta;
+$to = $email;
+$asunto='Registro socios en teamPro';
+$mensaje ="
+Hola señor/a socio/a: $nombre $apellido 
+Sus datos de registros son los siguientes:
 
-$asunto="Gracias Por Confiar en Team Pro";
-$mensaje2 ="
+Numero socio: $numeroSocio
 
+Contraseña: $password
 
-Team Pro Pruebas de envio
-Para: $nombre  $apellido
-
- Señor/ra : $nombre le agradecemos confiar en nosotros. Su cuenta en la aplicación de reservas de turnos se creó correctamente
- Nº de socio: $numeroSocio
- Usuario: $nombre $apellido 
- Contraseña: $password 
- 
 ";
-#¿ES realmente necesario q el usuario sepa q se encriptó? Porque en definitiva ingresará con su contraseña 'humana'. 
-#podría ser confuso para el socio el dato
+$header = 'From: Club Mendoza Regatas'. "\r\n" .
+'X-Mailer: PHP';
 
-
-$header = 'From:Club Mendoza Regatas'. "\r\n" . #al socio le debería llegar un mail con el remitente que sea el NOMBRE DEL CLUB
-'X-Mailer: PHP/' ;
-
-
-$resultado=mail($email,$asunto,$mensaje2,$header);
-    if ($resultado) {
-        echo "Correo enviado correctamente";
+//mail($para,$asunto,$mensaje,$header);
+$correo=mail($email,$asunto,$mensaje,$header);
+    if ($correo) {
+        echo "<script>alert('mensaje enviado')</script>";
     } else {
-        echo "El correo NO fue enviado";
+        echo "<script>alert('Correo NO enviado Intentelo nuevamente')</script>";
     }
-
-
 ?>
