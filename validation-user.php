@@ -1,15 +1,14 @@
 <?php
 //este archivo lo cree para hacer la validacion de correo y contraseña, esto me va a costar lo se quiero shorar jajaja;
-$UserNumber=$_POST['UserNumber'];
+$fileLogin=$_POST['fileLogin']; //la variablefileLogin me va guardar el numero de socio o celular de la vista index-view.php
 $password=$_POST['password'];
-$mobile=$_POST['mobile'];
 $passwordSecure = hash('sha512' , $password);
 
 //Para hacer la validacion no me quedo de otr que volver a escribir la conexion a la base de datos porque necesitaba si o si tenerlo a mano para usar unas variables de la conexion;
 //$conectar = mysqli_connect('localhost','root','','inscripcionsocios');
 require "conection.php";
 //consulta sql;
-$query = "SELECT * FROM `socios` WHERE `userSocio` = '$UserNumber' || '$mobile'  AND `passwordSecure` = '$password'";
+$query = "SELECT * FROM `socios` WHERE `numeroSocio` = '$fileLogin' || `mobile` = '$fileLogin'  AND `passwordSecure` = '$passwordSecure'";
 
 //ejecuto la consulta sql;
 $resultado = mysqli_query($conectar,$query);
