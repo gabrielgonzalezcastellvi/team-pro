@@ -4,7 +4,7 @@ require 'header.php';
 <div class="login-panel">
 <form class="formulario" name="login" action="validation-user.php" method="POST">
 			<div class="form-group">
-				<i class="icono izquierda fa fa-user"></i><input class="usuario" type="text" name="NumberSocio" placeholder="Numero de socio o Celular" required>
+				<i class="icono izquierda fa fa-user"></i><input class="usuario" type="text" name="numero" placeholder="Numero de socio o Celular" required>
 			</div>
 
 			<div class="form-group">
