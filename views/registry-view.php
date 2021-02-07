@@ -11,9 +11,9 @@ s
 
         <input class="registry" type="text" name="LastName" title="Apellido" placeholder="Apellido" required>
 
-        <input class="registry" type="number" name="UserNumber" title="NumeroDeUsuario" placeholder="Numero de socio" required>
+        <input class="registry" type="text" name="UserNumber" title="NumeroDeUsuario" placeholder="Numero de socio" required pattern="[0-9]+" >
 
-        <input class="registry" type="number" name="mobile" placeholder="Celular" required>
+        <input class="registry" type="text" name="mobile" placeholder="Celular" required>
 
         <input class="registry" type="email" name="email" title="Correo" placeholder="Email" required>
 
