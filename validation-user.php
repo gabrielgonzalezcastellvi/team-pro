@@ -6,7 +6,7 @@ $password = hash('sha512' , $password);
 
 require "conection.php";
 //consulta sql;
-$query = "SELECT * FROM `socios` WHERE `numeroSocio` = '$NumeroSocio' AND `passwordSecure` = '$password'"; //Validado por mi mari funciona jajaj
+$query = "SELECT * FROM `user_socios` WHERE `numeroSocio` = '$NumeroSocio' AND `passwordSecure` = '$password'"; //Validado por mi mari funciona jajaj
 
 //ejecuto la consulta sql;
 $resultado = mysqli_query($conectar,$query);
