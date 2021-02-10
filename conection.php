@@ -9,7 +9,7 @@ if(!$conectar){
     $base= mysqli_select_db($conectar, 'teampro-reservasapp'); //aca apunto a la base de datos que se llama inscripcionsocios
     if(!$base){
     echo "No se encontro la base de datos";
-    //pruebas
+  
     }
 }
 ?>
