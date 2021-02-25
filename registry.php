@@ -1,7 +1,8 @@
 <?php
+require 'config.php';
 require 'conection.php';
 
-#Lógica del formulario de registro de susuario SOCIO
+#el back de registro de nvo usuario está en send.php
 
 
 
