@@ -16,6 +16,8 @@ $passwordSecure = hash('sha512' , $password);
 //Hacemos la sentencia sql para insertar los datos;
 // preparar y ejecutar en un array
 
+#IMPORTANTEEEEEEE: El nro de socio no deberia repetirse, es decir, registrarse 2 veces en la DB
+
 $sql="INSERT INTO user_socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$email','$mobile','$passwordSecure')"; //socios es el nombre de la tabla que se encuentra dentro de la base de datos 
 //reservas, voy a guardar la variable $passwordSecure que esta encriptada en la base de datos;
 
