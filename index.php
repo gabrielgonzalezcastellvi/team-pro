@@ -1,9 +1,10 @@
 <?php
+#session_start();
 require 'config.php';
 
 
-#Lógica del home de la App
-#panel login
+#back del inicio de sesion -> login-user.php
+
 
 
 require 'views/index-view.php';
