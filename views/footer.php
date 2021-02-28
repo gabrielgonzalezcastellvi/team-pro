@@ -1,15 +1,7 @@
 <footer>
-    <section id="developer">
-        <div class="container-fluid">
-            <p>Desarrollado por</p>
-            <a href="#">
-            <img id="team-pro" src="<?php echo RUTA; ?>/images/teamPRO-logo.png" alt="team PRO" width="100px">
-            </a>
-
-
-        </div>
-
-    </section>
+<div class="developer">
+<p>Copyright TeamPRO</p>
+</div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
