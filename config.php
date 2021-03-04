@@ -1,5 +1,5 @@
 <?php
-define('RUTA', 'http://localhost/team-pro');
+define('RUTA', 'http://localhost:81/team-pro');
 
 
 

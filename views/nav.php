@@ -19,7 +19,7 @@
         </li>
       </ul>
       <li class="d-flex">
-      <button type="button" class="btn btn-primary"><i class="fas fa-sign-out-alt"></i> Salir</button>
+     <a href="index.php"><button type="button" class="btn btn-primary"><i class="fas fa-sign-out-alt"></i> Salir</button></a>
           
         </li>
     </div>
