@@ -1,5 +1,5 @@
 <?php
-#VISTA del login
+#VISTA del login (logica en login-user.php)
 require 'header.php';
 ?>
 

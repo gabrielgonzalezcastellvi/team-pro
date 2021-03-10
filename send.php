@@ -2,8 +2,6 @@
 require 'conection.php';
 require 'functions.php';
 
-//Se recuperan las variables del formularios de inscripcion;
-
 $nombre = strtoupper(limpiarDatos($_POST['Name']));
 $apellido = strtoupper(limpiarDatos($_POST['LastName']));
 $numeroSocio = limpiarDatos($_POST['UserNumber']);
@@ -12,34 +10,23 @@ $mobile = limpiarDatos($_POST['mobile']);
 $password = $_POST['password'];
 $passwordSecure = hash('sha256', $password);
 
+#validación que no se repita el nº de socio en DB, verificando si la columna tiene filas, es decir, datos
+$validarSocio = mysqli_num_rows(mysqli_query($conectar, "SELECT `numeroSocio` FROM user_socios WHERE `numeroSocio` = $numeroSocio")); 
 
-//Hacemos la sentencia sql para insertar los datos;
-// preparar y ejecutar en un array
-
-
-
-#validad que no se repita el nº de socio en DB
-$query1 = "SELECT `numeroSocio` FROM user_socios WHERE `numeroSocio` = $numeroSocio"; #hacemos consulta
-$query2 = mysqli_query($conectar, $query1); #conectamos a la DB para ejecutar el query1
-$query3 = mysqli_num_rows($query2); #verificamos si la columna tiene filas, es decir, datos
-
-
-if ($query3 >0) {
+if ($validarSocio >0) {
     echo "<script>alert('EL Nº de socio $numeroSocio ya está registrado'); window.location.href='index.php';</script>";
-} else {
-    
-    $sql = "INSERT INTO user_socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$email','$mobile','$passwordSecure')"; //socios es el nombre de la tabla que se encuentra dentro de la base de datos 
-    //reservas, voy a guardar la variable $passwordSecure que esta encriptada en la base de datos;
+} else {    
+    $sql = "INSERT INTO user_socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$email','$mobile','$passwordSecure')"; 
+    #IMPORTANTEEE: VERIFICAR LA ENCRIPTACION DE LA CONTRASEÑA
 
-    //ejecutamos la sentencia sql;
+
+
     $ejecutar = mysqli_query($conectar, $sql);
-    //verificamos la ejecucion;
     if (!$ejecutar) {
         echo "<script>alert('Hubo un error, por favor inténtalo nuevamente. Si el error persiste por favor contáctate con nosotros'); window.location.href='index.php';</script>";
-        //Utilice la funcion window.location.href='documento.php' para poder mostrar el alert y luego redireccionar a la pagina, esta chequedo funciona.;
     }
-    //}
-    //aca abajo se envia el correo al usuario para que tambien tenga en su correo los datos de su cuenta;
+    
+    //Enviar correo al usuario con su registro
     $to = $email;
     $asunto = 'Registro de socio en la app de reservas';
     $mensaje = "
@@ -60,8 +47,7 @@ if ($query3 >0) {
     $correo = mail($to, $asunto, $mensaje, $header);
 
     if ($correo) {
-        // echo"<script>alert('Se envio su correo'); window.location.href='index.php';</script>";
-        echo "<script>alert('Tus datos se enviaron correctamente. Por favor, chequea tu mail.');window.location.href='index.php';</script>";
+        echo "<script>alert('Tus datos se enviaron correctamente. Por favor, chequeá tu mail.');window.location.href='index.php';</script>";
     } else {
         echo "<script>alert('No se envio su correo'); window.location.href='index.php';</script>";
     }
