@@ -1,12 +1,12 @@
 <?php
-#ESTEA VISTA EL HOME DE LA APP PARA loguearse
+#VISTA del login
 require 'header.php';
 ?>
 
 <div class="login-panel">
 	<form class="formulario" name="login" action="login-user.php" method="POST">
 		<div class="form-group">
-			<i class="icono izquierda fa fa-user"></i><input class="usuario" type="text" name="numero" placeholder="Numero de socio o Celular" required>
+			<i class="icono izquierda fa fa-user"></i><input class="usuario" type="text" name="dato" placeholder="Numero de socio o Celular" required>
 		</div>
 
 		<div class="form-group">

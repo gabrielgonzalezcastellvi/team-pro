@@ -37,7 +37,7 @@ require 'nav.php';
 
                     <div class="form-group">
                         <input type="password" id="mostrar" name="password" title="Contraseña" placeholder="Nueva contraseña">
-                        <input type="checkbox" value="Mostrar Contraseña" onclick="mostrarContraseña()"> Mostrar
+                        <input type="checkbox" value="Mostrar Contraseña" onclick="mostrarContraseña()">Mostrar</input> 
                     </div>
 
                     <input class="btn btn-primary btn-lg" type="submit" value="Actualizar datos">
