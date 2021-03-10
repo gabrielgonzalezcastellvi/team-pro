@@ -19,15 +19,9 @@ $passwordSecure = hash('sha256' , $password);
 
 
 #IMPORTANTEEEEEEE: El nro de socio no deberia repetirse, es decir, registrarse 2 veces en la DB
-//$sql="SELECT `numeroSocio` FROM `user_socios` WHERE `numeroSocio` = '$numeroSocio'";
-$dataVerify = "SELECT `numeroSocio` FROM user_socios WHERE numeroSocio=? ";
-$result = $con->prepare($dataVerify);
-$result->execute(array($numeroSocio));
 
-if ($registro=$result->fetch()>0) {
-    echo "Este Nº de socio ya está registrado";
-} else {
-    $sql="INSERT INTO user_socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$email','$mobile','$passwordSecure')"; //socios es el nombre de la tabla que se encuentra dentro de la base de datos 
+
+$sql="INSERT INTO user_socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$email','$mobile','$passwordSecure')"; //socios es el nombre de la tabla que se encuentra dentro de la base de datos 
 //reservas, voy a guardar la variable $passwordSecure que esta encriptada en la base de datos;
 
 //ejecutamos la sentencia sql;
@@ -64,4 +58,4 @@ if ($correo) {
     } else {
     echo"<script>alert('No se envio su correo'); window.location.href='index.php';</script>";
     }
-}
+?>
