@@ -8,7 +8,7 @@ $numeroSocio = limpiarDatos($_POST['UserNumber']);
 $email = limpiarDatos($_POST['email']);
 $mobile = limpiarDatos($_POST['mobile']);
 $password = $_POST['password'];
-$passwordSecure = hash('sha256', $password);
+$passwordSecure = hash('sha512', $password);
 
 #validación que no se repita el nº de socio en DB, verificando si la columna tiene filas, es decir, datos
 $validarSocio = mysqli_num_rows(mysqli_query($conectar, "SELECT `numeroSocio` FROM user_socios WHERE `numeroSocio` = $numeroSocio")); 
