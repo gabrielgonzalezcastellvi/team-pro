@@ -10,13 +10,18 @@ $numeroSocio=limpiarDatos($_POST['UserNumber']);
 $email=limpiarDatos($_POST['email']);
 $mobile=limpiarDatos($_POST['mobile']);
 $password=$_POST['password'];
-$passwordSecure = hash('sha512' , $password);
+$passwordSecure = hash('sha256' , $password);
 
 
 //Hacemos la sentencia sql para insertar los datos;
 // preparar y ejecutar en un array
 
+
+
 #IMPORTANTEEEEEEE: El nro de socio no deberia repetirse, es decir, registrarse 2 veces en la DB
+//$sql="SELECT FROM user_socios WHERE `numeroSocio` = '$numeroSocio'";
+
+
 
 $sql="INSERT INTO user_socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$email','$mobile','$passwordSecure')"; //socios es el nombre de la tabla que se encuentra dentro de la base de datos 
 //reservas, voy a guardar la variable $passwordSecure que esta encriptada en la base de datos;
@@ -39,8 +44,10 @@ Tus datos fueron cargados correctamente, si coinciden con nuestros registros de 
 Recuerda tus datos:
 - $nombre $apellido
 - Nº socio: $numeroSocio
+- Celular registrado: $mobile
 - Contraseña: $password
 
+Recuerda que tus datos podrás editarlos desde 'Mi perfil'
 ";
 $header = 'From: Secretaría Club X'. "\r\n" .
 'X-Mailer: PHP';
