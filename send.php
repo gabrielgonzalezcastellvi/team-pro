@@ -13,8 +13,8 @@ $passwordSecure = hash('sha512', $password);
 #validación que no se repita el nº de socio en DB, verificando si la columna tiene filas, es decir, datos
 $validarSocio = mysqli_num_rows(mysqli_query($conectar, "SELECT `numeroSocio` FROM user_socios WHERE `numeroSocio` = $numeroSocio")); 
 
-if ($validarSocio >0) {
-    echo "<script>alert('EL Nº de socio $numeroSocio ya está registrado'); window.location.href='index.php';</script>";
+if ($validarSocio > 0) {
+    echo "<script>alert('EL Nº de socio $numeroSocio ya está registrado'); window.location.href='registry.php';</script>";
 } else {    
     $sql = "INSERT INTO user_socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$email','$mobile','$passwordSecure')"; 
     #IMPORTANTEEE: VERIFICAR LA ENCRIPTACION DE LA CONTRASEÑA

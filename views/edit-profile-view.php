@@ -1,6 +1,7 @@
 <?php
 require 'header.php';
 require 'nav.php';
+//include 'base de datos';
 
 ?>
 
