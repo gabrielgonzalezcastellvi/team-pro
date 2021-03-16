@@ -25,7 +25,7 @@ s
         <input class="btn btn-primary btn-lg" type="submit" value="Registrarse">
 
     </form>
-<p><a href="<?php echo RUTA;?>"><i class="fas fa-arrow-left"></i> Volver a inicio</a></p>
+<p class="volver"><a href="<?php echo RUTA;?>"><i class="fas fa-arrow-left"></i> Volver a inicio</a></p>
 
 </div>
 

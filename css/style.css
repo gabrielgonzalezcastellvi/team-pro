@@ -44,6 +44,9 @@ div.login-panel{
     
 
 }
+.volver{
+	margin: 1em;;
+}
 
 /*formularios*/
 .formulario {
@@ -135,6 +138,10 @@ div.login-panel{
 	margin: 10px 0;
 }
 
+.show-pass{
+	margin-left: 0.5em;
+}
+
 /*formulario nueva reserva*/
 .form-booking{
 
@@ -205,6 +212,11 @@ h3.app-name{
 	font-family: 'Londrina Solid', cursive;
 	font-size: 26px;
 	color: #333333;
+}
+
+/*reestablecer pass*/
+h3.reset-h3{
+	margin-bottom: 1em;
 }
 /*footer*/
 section#developer{
