@@ -1,4 +1,6 @@
 
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
 
@@ -19,7 +21,8 @@
         </li>
       </ul>
       <li class="d-flex">
-      <button type="button" class="btn btn-primary"><i class="fas fa-sign-out-alt"></i> Salir</button>
+      <a href="<?php echo RUTA; ?>/close.php" class="btn btn-primary">
+      <i class="fas fa-sign-out-alt"></i> Salir</a>
           
         </li>
     </div>

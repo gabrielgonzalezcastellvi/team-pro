@@ -2,7 +2,7 @@
     <section id="developer">
         <div class="container-fluid">
             <p>Desarrollado por</p>
-            <a href="#">
+            <a href="<?php echo RUTA;?>">
             <img id="team-pro" src="<?php echo RUTA; ?>/images/teamPRO-logo.png" alt="team PRO" width="100px">
             </a>
 

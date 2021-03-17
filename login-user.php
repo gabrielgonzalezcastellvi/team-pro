@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 
 #validamos nº de socio o celular para poder ingresar
 $dato = $_POST['dato'];
@@ -19,6 +19,9 @@ if (!$resultado) {
 $filas = mysqli_num_rows($resultado);
 
 if($filas > 0) {
+
+    //Si el usuario existe, CREAMOS su sesion y lo mandamos al panel de inicio home-panel.php
+    $_SESSION['numeroSocio'] = $dato;
     echo "<script>window.location.href='home-panel.php'</script>";
 }else {
     echo "<script>alert('Ups! Hubo un problema al intentar iniciar sesión. Por favor revisá tus datos de acceso.'); window.location.href='index.php';</script>";

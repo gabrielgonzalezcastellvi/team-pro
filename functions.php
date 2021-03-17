@@ -16,4 +16,12 @@ function limpiarDatos($datos){
 	return $datos;
 }
 
-?>
+function comprobarSession(){
+	// Comprobamos si la session esta iniciada
+if (!isset($_SESSION['numeroSocio'])) {
+	header('Location: index.php');
+	die();
+}
+
+
+}

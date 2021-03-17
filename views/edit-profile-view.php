@@ -11,12 +11,13 @@ require 'nav.php';
         <div class="col">
             <div class="caja-perfil">
                 <ul class="datos-perfil">
-                <li><?php echo 'codigo php q traiga Nombre y apellido'; ?></li>
-                    <li><i class="perfil fas fa-user"></i> <?php echo 'codigo php q traiga Nombre y apellido'; ?></li>
-                    <li><i class="perfil fas fa-id-card"></i> <?php echo 'codigo php q traiga Nº Socio'; ?></li> <!--este dato no deberia poder editarse, ya q es un ID otorgado x la Institucion-->
-                    <li><i class="perfil fas fa-mobile-alt"></i> <?php echo 'codigo php q traiga Teléfono (celular)'; ?></li>
-                    <li><i class="perfil fas fa-envelope"></i> <?php echo 'codigo php q traiga E-mail'; ?></li>
-                    <li><i class="perfil fas fa-lock"></i> <?php echo 'codigo php q traiga Contraseña (oculta!!) '; ?><input type="checkbox" value="Mostrar Contraseña" onclick=""> Mostrar</li>
+                    <li><i class="perfil fas fa-user"></i> <span class="dato-socio"><?php echo $datos_perfil[2].', '.$datos_perfil[1]; ?></span></li>
+                    <li><i class="perfil fas fa-id-card"></i> Nº SOCIO: <span class="dato-socio"><?php echo $datos_perfil[3]; ?></span></li> <!--este dato no deberia poder editarse, ya q es un ID otorgado x la Institucion-->
+                    <li><i class="perfil fas fa-envelope"></i> <span class="dato-socio"><?php echo $datos_perfil[4]; ?></span></li>
+                    <li><i class="perfil fas fa-mobile-alt"></i> <span class="dato-socio"><?php echo $datos_perfil[5]; ?></span></li>
+                    <li><i class="perfil fas fa-lock"></i> <span class="dato-socio"><?php echo $datos_perfil[6]; ?></span></li>
+                    NO SÉ COMO TRAER LA CONTRASEÑA OCULTA
+
                 </ul>
             </div>
         </div>

@@ -16,7 +16,7 @@ $validarSocio = mysqli_num_rows(mysqli_query($conectar, "SELECT `numeroSocio` FR
 if ($validarSocio > 0) {
     echo "<script>alert('EL Nº de socio $numeroSocio ya está registrado'); window.location.href='registry.php';</script>";
 } else {    
-    $sql = "INSERT INTO user_socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$email','$mobile','$passwordSecure')"; 
+    $sql = "INSERT INTO user_socios VALUES (NULL,'$nombre','$apellido','$numeroSocio','$email','$mobile', '$password', '$passwordSecure')"; 
     #IMPORTANTEEE: VERIFICAR LA ENCRIPTACION DE LA CONTRASEÑA
 
 

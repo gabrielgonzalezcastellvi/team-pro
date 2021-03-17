@@ -161,21 +161,31 @@ select.form-select{
 	margin: 1em 0;
 }
 
-
+.saludo{
+	color:#4e4e7c;
+	font-size: 20px;
+	font-weight: bold;
+}
 /*EDITAR PERFIL*/
 div.caja-perfil{
 	background-color: #e6e6e6;
 	margin: 1em 1em;
 	padding: 1em 1em;
 	
+	
 }
 ul.datos-perfil{
 	list-style: none;
 	display: inline;
 	vertical-align: middle;
-
+	
 }
-.perfil{
+.dato-socio{
+	font-weight: bold;
+	color: #4e4e7c;
+}
+
+i.perfil{
 	/*margin-right: 0.8em;
 	text-align: right;*/
 	margin-bottom: 0.5em;
@@ -186,11 +196,12 @@ ul.datos-perfil{
 	font-size: 18px;
 	line-height: 18px;
 	background: #333333;
-	display: inline-block;
+	/*display: inline-block;*/
 	color:#fff;
 	vertical-align: top;
 
 }
+
 form.edit-profile{
 	display: inline-grid;
 }
