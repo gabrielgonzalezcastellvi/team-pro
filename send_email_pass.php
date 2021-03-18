@@ -13,7 +13,7 @@ $to = $email;
 
 $asunto = 'Restablecimiento de contraseña TeamPro';
 $mensaje = "
-Hola $nombre $apellido a traves de este enlace podras restabler tu contraseña $link.
+Hola $nombre $apellido a traves de este enlace podras restablecer tu contraseña $link.
  ";
 $header = 'From: Secretaría Club X' . "\r\n" .
     'X-Mailer: PHP';
