@@ -7,7 +7,7 @@ $nombre = "gabriel";
 $apellido = "gonzalez";
 $numeroSocio = "3434";
 $email = $_POST['email'];
-$link = "http://localhost:81/team-pro/edit-profile.php?Restablecer-Password";
+$link = 'http://localhost:81/team-pro/edit-profile.php?Restablecer-Password';
 
 $to = $email;
 
@@ -21,8 +21,11 @@ $header = 'From: Secretaría Club X' . "\r\n" .
 $correo = mail($to, $asunto, $mensaje, $header);
 
 
-
-
+if($correo){
+ echo"<script>alert('Se envio un link de tu correo para poder restablecer su contraseña.'); window.location.href='index.php'</script>";
+}else{
+    echo"<script>alert('No se pudo enviar su correo, verifique el correo') window.location.href='reset-pass.php'</script>";
+}
 
 
 ?>
