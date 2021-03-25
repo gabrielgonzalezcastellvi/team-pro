@@ -18,7 +18,6 @@ require 'header.php';
 		</div>
 		<a href="<?php echo RUTA; ?>/reset-pass.php">¿Olvidaste la contraseña?</a> | <a href="<?php echo RUTA; ?>/registry.php">¿Aún no estás registrado?</a>
 	</form>
-	<a href="<?php echo RUTA; ?>/home-panel.php">home-panel.php</a> --> Esto hay q quitarlo cdo configuremos al final los session_start, es sólo para poder entrar facilmente
 </div>
 
 
