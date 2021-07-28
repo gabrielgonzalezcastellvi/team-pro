@@ -29,13 +29,13 @@ require 'nav.php';
                 <h3 class="section-title">Editar mis datos</h3>
                 <form class="formulario edit-profile" name="registry" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
                     <input type="hidden" name="id" value=""> <!--value = al id en la DB del usuario, para q traiga el resto de los datos en funcion de su id-->
-                    <input class="registry" type="text" name="Name" title="Nombre" value="<?php echo 'aqui trae el dato de la DB'; ?>">
+                    <legend>Nombre</legend><input class="registry" type="text" name="Name" title="Nombre" value="<?php echo 'aqui trae el dato de la DB'; ?>">
 
-                    <input class="registry" type="text" name="LastName" title="Apellido" placeholder="Apellido" value="<?php echo 'aqui trae el dato de la DB'; ?>">
+                    <legend>Apellido</legend><input class="registry" type="text" name="LastName" title="Apellido" placeholder="Apellido" value="<?php echo 'aqui trae el dato de la DB'; ?>">
 
-                    <input class="registry" type="number" name="mobile" placeholder="Celular" value="<?php echo 'aqui trae el dato de la DB'; ?>">
+                    <legend>Tel.</legend><input class="registry" type="number" name="mobile" placeholder="Celular" value="<?php echo 'aqui trae el dato de la DB'; ?>">
 
-                    <input class="registry" type="email" name="email" title="Correo" placeholder="Email" value="<?php echo 'aqui trae el dato de la DB'; ?>">
+                    <legend>Email</legend><input class="registry" type="email" name="email" title="Correo" placeholder="Email" value="<?php echo 'aqui trae el dato de la DB'; ?>">
 
                     <div class="form-group">
                         <input type="password" id="mostrar" name="password" title="Contraseña" placeholder="Nueva contraseña">
